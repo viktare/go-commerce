@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS products (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    code VARCHAR(10) NOT NULL,
+    price BIGINT NOT NULL DEFAULT 0,
+    stock INT NOT NULL DEFAULT 0,
+    created_at TIMESTAMP DEFAULT now()
+);
