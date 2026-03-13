@@ -31,6 +31,7 @@ func main() {
 		})
 	})
 
+	router.GET("/products", handlers.GetProductsHandler(pool))
 	router.POST("/products", handlers.CreateProductHandler(pool))
 
 	router.Run(":" + cfg.Port)
